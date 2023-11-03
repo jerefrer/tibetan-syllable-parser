@@ -1,28 +1,28 @@
 {
-  "name": "@jbro/tibetan-syllable-parser",
+  "name": "tibetan-syllable-parser",
   "version": "1.0.0",
-  "description": "",
+  "description": "A parser to deconstruct a single Unicode Tibetan syllable into its different parts.",
   "main": "dist/tibetan-syllable-parser.umd.js",
-  "dependencies": {
-    "underscore": "^1.8.3"
-  },
-  "devDependencies": {
-    "acorn": "^7.4.1",
-    "rollup": "^1.32.1",
-    "jest": "^26.6.0",
-    "jest-cli": "^26.6.0",
-    "jest-css-modules": "^2.1.0",
-    "jest-environment-jsdom-fourteen": "^1.0.1",
-    "jest-serializer-html": "^7.0.0"
-  },
   "scripts": {
     "clean": "rm -rf ./dist && mkdir dist",
     "build": "npm run clean && npm run build:esm && npm run build:umd",
     "build:esm": "cp src/tibetan-syllable-parser.js dist/tibetan-syllable-parser.esm.js",
     "build:umd": "rollup src/tibetan-syllable-parser.js --format umd --name TibetanSyllableParser --file dist/tibetan-syllable-parser.umd.js",
-    "test": "jest"
+    "test": "jest --colors"
   },
-  "keywords": [],
-  "author": "",
-  "license": "MIT"
+  "keywords": [
+    "tibetan",
+    "syllables",
+    "languages",
+    "linguistics",
+    "transliteration",
+    "phonetics"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "underscore": "^1.13.6"
+  }
 }
