@@ -1,6 +1,6 @@
 {
   "name": "tibetan-syllable-parser",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A parser to deconstruct a single Unicode Tibetan syllable into its different parts.",
   "main": "dist/tibetan-syllable-parser.umd.js",
   "scripts": {
@@ -20,7 +20,8 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "jest": "^29.7.0"
+    "jest": "^29.7.0",
+    "rollup": "^4.2.0"
   },
   "dependencies": {
     "underscore": "^1.13.6"
