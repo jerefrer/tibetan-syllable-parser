@@ -1,4 +1,4 @@
-import { _ } from '../../underscore/underscore.esm.js';
+import _ from 'underscore';
 
 export const TibetanSyllableParser = function(syllable, options = {}) {
   var normalizedSyllable = syllable
