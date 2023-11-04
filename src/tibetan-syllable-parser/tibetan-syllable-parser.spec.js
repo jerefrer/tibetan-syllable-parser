@@ -231,8 +231,8 @@ testGroups.push({
   ]
 });
 
-var _ = require('underscore');
-var { TibetanSyllableParser } = require('../lib/bundles/bundle.umd.js');
+import _ from 'underscore';
+import { TibetanSyllableParser } from '../../lib/bundles/bundle.esm.js';
 
 _(testGroups).each(function(testGroup) {
 
