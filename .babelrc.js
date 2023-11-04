@@ -1,7 +1,5 @@
-const sharedPresets = ['@babel/typescript'];
 const shared = {
-  ignore: ['src/**/*.spec.ts'],
-  presets: sharedPresets
+  ignore: ['src/**/*.spec.js']
 }
 
 module.exports = {
@@ -11,16 +9,16 @@ module.exports = {
       ...shared,
       presets: [['@babel/env', {
         targets: "> 0.25%, not dead"
-      }], ...sharedPresets],
+      }]],
     },
     cjs: {
       ...shared,
       presets: [['@babel/env', {
         modules: 'commonjs'
-      }], ...sharedPresets],
+      }]],
     },
     test: {
-      presets: ['@babel/env', ...sharedPresets]
+      presets: ['@babel/env']
     },
   }
 }

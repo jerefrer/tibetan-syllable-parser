@@ -2,10 +2,10 @@ import babel from '@rollup/plugin-babel';
 import terser from "@rollup/plugin-terser";
 import resolve from '@rollup/plugin-node-resolve';
 
-const extensions = ['.js', '.ts' ];
+const extensions = ['.js' ];
 
 export default  {
-  input: 'src/index.ts',
+  input: 'src/index.js',
   output: [
     {
       file: 'lib/bundles/bundle.esm.js',
@@ -21,19 +21,19 @@ export default  {
     {
       file: 'lib/bundles/bundle.umd.js',
       format: 'umd',
-      name: 'myLibrary',
+      name: 'TibetanSyllableParser',
       sourcemap: true
     },
     {
       file: 'lib/bundles/bundle.umd.min.js',
       format: 'umd',
-      name: 'myLibrary',
+      name: 'TibetanSyllableParser',
       plugins: [terser()],
       sourcemap: true
     }
   ],
   plugins: [
     resolve({ extensions }),
-    babel({ babelHelpers: 'bundled', include: ['src/**/*.ts'], extensions, exclude: './node_modules/**'})
+    babel({ babelHelpers: 'bundled', extensions, exclude: './node_modules/**'})
   ]
 }

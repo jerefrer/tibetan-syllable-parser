@@ -6,6 +6,6 @@
     "outDir": "lib/types",
   },
   "include": [
-    "./src/index.ts"
+    "./src/index.js"
   ],
 }

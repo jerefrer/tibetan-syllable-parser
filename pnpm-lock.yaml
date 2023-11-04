@@ -19,9 +19,6 @@ devDependencies:
   '@babel/preset-env':
     specifier: ^7.23.2
     version: 7.23.2(@babel/core@7.23.2)
-  '@babel/preset-typescript':
-    specifier: ^7.23.2
-    version: 7.23.2(@babel/core@7.23.2)
   '@rollup/plugin-babel':
     specifier: ^6.0.4
     version: 6.0.4(@babel/core@7.23.2)(rollup@4.3.0)
@@ -49,9 +46,6 @@ devDependencies:
   rollup:
     specifier: ^4.3.0
     version: 4.3.0
-  typescript:
-    specifier: ^5.2.2
-    version: 5.2.2
 
 packages:
 
@@ -1074,19 +1068,6 @@ packages:
       '@babel/helper-plugin-utils': 7.22.5
     dev: true
 
-  /@babel/plugin-transform-typescript@7.22.15(@babel/core@7.23.2):
-    resolution: {integrity: sha512-1uirS0TnijxvQLnlv5wQBwOX3E1wCFX7ITv+9pBV2wKEk4K+M5tqDaoNXnTH8tjEIYHLO98MwiTWO04Ggz4XuA==}
-    engines: {node: '>=6.9.0'}
-    peerDependencies:
-      '@babel/core': ^7.0.0-0
-    dependencies:
-      '@babel/core': 7.23.2
-      '@babel/helper-annotate-as-pure': 7.22.5
-      '@babel/helper-create-class-features-plugin': 7.22.15(@babel/core@7.23.2)
-      '@babel/helper-plugin-utils': 7.22.5
-      '@babel/plugin-syntax-typescript': 7.22.5(@babel/core@7.23.2)
-    dev: true
-
   /@babel/plugin-transform-unicode-escapes@7.22.10(@babel/core@7.23.2):
     resolution: {integrity: sha512-lRfaRKGZCBqDlRU3UIFovdp9c9mEvlylmpod0/OatICsSfuQ9YFthRo1tpTkGsklEefZdqlEFdY4A2dwTb6ohg==}
     engines: {node: '>=6.9.0'}
@@ -1230,20 +1211,6 @@ packages:
       '@babel/helper-plugin-utils': 7.22.5
       '@babel/types': 7.23.0
       esutils: 2.0.3
-    dev: true
-
-  /@babel/preset-typescript@7.23.2(@babel/core@7.23.2):
-    resolution: {integrity: sha512-u4UJc1XsS1GhIGteM8rnGiIvf9rJpiVgMEeCnwlLA7WJPC+jcXWJAGxYmeqs5hOZD8BbAfnV5ezBOxQbb4OUxA==}
-    engines: {node: '>=6.9.0'}
-    peerDependencies:
-      '@babel/core': ^7.0.0-0
-    dependencies:
-      '@babel/core': 7.23.2
-      '@babel/helper-plugin-utils': 7.22.5
-      '@babel/helper-validator-option': 7.22.15
-      '@babel/plugin-syntax-jsx': 7.22.5(@babel/core@7.23.2)
-      '@babel/plugin-transform-modules-commonjs': 7.23.0(@babel/core@7.23.2)
-      '@babel/plugin-transform-typescript': 7.22.15(@babel/core@7.23.2)
     dev: true
 
   /@babel/regjsgen@0.8.0:
@@ -4290,12 +4257,6 @@ packages:
       call-bind: 1.0.5
       for-each: 0.3.3
       is-typed-array: 1.1.12
-    dev: true
-
-  /typescript@5.2.2:
-    resolution: {integrity: sha512-mI4WrpHsbCIcwT9cF4FZvr80QUeKvsUsUvKDoR+X/7XHQH98xYD8YHZg7ANtz2GtZt/CBq2QJ0thkGJMHfqc1w==}
-    engines: {node: '>=14.17'}
-    hasBin: true
     dev: true
 
   /unbox-primitive@1.0.2:

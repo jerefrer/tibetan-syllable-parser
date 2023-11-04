@@ -232,7 +232,7 @@ testGroups.push({
 });
 
 import _ from 'underscore';
-import { TibetanSyllableParser } from '../../lib/bundles/bundle.esm.js';
+import { TibetanSyllableParser } from '../../lib/esm/tibetan-syllable-parser/tibetan-syllable-parser';
 
 _(testGroups).each(function(testGroup) {
 
