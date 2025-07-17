@@ -1,6 +1,6 @@
 {
   "name": "tibetan-syllable-parser",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "description": "A parser to deconstruct a single Unicode Tibetan syllable into its different parts.",
   "keywords": [
     "tibetan",
@@ -37,9 +37,7 @@
   "bugs": {
     "url": "https://github.com/jerefrer/tibetan-syllable-parser/issues"
   },
-  "dependencies": {
-
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.23.0",
     "@babel/core": "^7.23.2",
