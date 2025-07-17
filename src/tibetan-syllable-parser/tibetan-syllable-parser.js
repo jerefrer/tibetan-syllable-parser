@@ -1,14 +1,10 @@
-import _ from 'underscore';
-
 export const TibetanSyllableParser = function(syllable, options = {}) {
   var normalizedSyllable = syllable
     .replace(/ཱུ/g, 'ཱུ')
     .replace(/ཱི/g, 'ཱི')
     .replace(/ཱྀ/g, 'ཱྀ');
   return {
-    options: _(options).defaults({
-      keepMainAsSuperscribed: false
-    }),
+    options: Object.assign({ keepMainAsSuperscribed: false }, options),
     prefix: undefined,
     suffix: undefined,
     secondSuffix: undefined,
@@ -25,8 +21,8 @@ export const TibetanSyllableParser = function(syllable, options = {}) {
     at: function(element, delta, options = {}) {
       var index;
       var syllable = this.simplifiedSyllable();
-      if (options.fromEnd) index = _(syllable).lastIndexOf(element);
-      else                 index = _(syllable).indexOf(element);
+      if (options.fromEnd) index = syllable.lastIndexOf(element);
+      else                 index = syllable.indexOf(element);
       return (index >= 0) ? syllable[index+delta] : undefined;
     },
     vowel: function() {
@@ -163,7 +159,7 @@ export const TibetanSyllableParser = function(syllable, options = {}) {
       this.handleEndingO();
       this.handleAndOrParticleAAng();
       this.handleConcessiveParticleAAm();
-      if (this.length() == 1) this.root = _(this.simplifiedSyllable()).first();
+      if (this.length() == 1) this.root = this.simplifiedSyllable()[0];
       if (this.vowel()) this.root = this.at(this.vowel(), -1);
       if (this.wasur()) this.root = this.syllable[this.syllable.replace(/[ྲྱཱཾ༵ྃྂ]/g, '').indexOf(this.wasur()) - 1];
       else if (this.subscribed()) this.root = this.at(this.subscribed(), -1);
@@ -178,7 +174,7 @@ export const TibetanSyllableParser = function(syllable, options = {}) {
           this.suffix = this.syllable[2];
           this.secondSuffix = this.syllable[3];
         } else if (this.length() == 3) {
-          if (!(_(this.syllable).last() == 'ས')) this.root = this.syllable[1];
+          if (!(this.syllable[this.syllable.length - 1] == 'ས')) this.root = this.syllable[1];
           else if (!this.secondLetterIsGaNgaBaMa()) this.root = this.syllable[1];
           else if ( this.secondLetterIsGaNgaBaMa()) this.root = this.syllable[0];
           else alert("There has been an error:\n\nThe syllable "+this.syllable+" could not be parsed.\n\nAre you sure it's correct?")

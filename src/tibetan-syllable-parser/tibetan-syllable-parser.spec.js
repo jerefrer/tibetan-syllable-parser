@@ -231,22 +231,23 @@ testGroups.push({
   ]
 });
 
-import _ from 'underscore';
 import { TibetanSyllableParser } from './tibetan-syllable-parser.js';
 
-_(testGroups).each(function(testGroup) {
+function omit(obj, keys) {
+  const result = {};
+  Object.keys(obj).forEach(k => {
+    if (!keys.includes(k)) result[k] = obj[k];
+  });
+  return result;
+}
 
-  describe(testGroup.name, function() {
-
-    _(testGroup.tests).each(function(test) {
-
-      it(test.syllable, function() {
+testGroups.forEach(function (testGroup) {
+  describe(testGroup.name, function () {
+    testGroup.tests.forEach(function (test) {
+      it(test.syllable, function () {
         var parsed = new TibetanSyllableParser(test.syllable).parse();
-        expect(parsed).toEqual(_(test).omit('syllable'));
-      })
-
-    })
-
-  })
-
+        expect(parsed).toEqual(omit(test, ['syllable']));
+      });
+    });
+  });
 });
