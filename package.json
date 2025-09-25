@@ -1,7 +1,7 @@
 {
   "name": "tibetan-syllable-parser",
   "type": "module",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A parser to deconstruct a single Unicode Tibetan syllable into its different parts.",
   "keywords": [
     "tibetan",
